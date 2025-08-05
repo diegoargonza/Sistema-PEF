@@ -1,8 +1,14 @@
+import { useState } from "react"
 import { Link } from "react-router-dom"
 
+
 function Navegation(){
+    
+const [isOpen, setIsOpen] = useState(false);
     return(
+        
         <>
+        {/* Navbar */}
         <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> 
         <nav class="bg-gray-100">
         <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -25,16 +31,34 @@ function Navegation(){
                 <img /> {/*Escudo de la UNAM*/}
                 </div>
                 <div class="hidden sm:ml-6 sm:block">
-                <div class="flex space-x-4">
+                <div class="flex space-x-4 relative">
                     
                     <a href="#"  class="rounded-md px-3 py-2 text-sm font-medium text-balck hover:bg-gray-700 hover:text-white"><Link to="/">Inicio</Link></a>
-                    <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">Consulta </a>
-                    <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">Registro de productos de Inv.</a>
-                    <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">Reportes</a>
+
+                    <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white"><Link to="Consulta" onClick={()=> setIsOpen(!isOpen)}>Consulta</Link> 
+                    </a>            
+                        {/* {isOpen && (
+                        <div className="  ">
+                            <a href="#" className="block px-4 py-2 hover:bg-gray-200">
+                            Opción 1
+                            </a>
+                            <a href="#" className="block px-4 py-2 hover:bg-gray-200">
+                            Opción 2
+                            </a>
+                            <a href="#" className="block px-4 py-2 hover:bg-gray-200">
+                            Cerrar sesión
+                            </a>
+                        </div>
+                        )} */}
+                    
+                    <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white"><Link to="registroInv">Registro de productos de Inv.</Link></a>
+                    <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white"><Link to="reportes">Reportes</Link></a>
                     <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">Administración</a>
                     
                 </div>
                 </div>
+
+                
             </div>
             <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <button type="button" class="">
@@ -65,6 +89,8 @@ function Navegation(){
             </div>
         </el-disclosure>
         </nav>
+
+        {/* Buscador */}
 
         <div class="w-full max-w-sm min-w-[500px] mx-auto md:mt-3">
             <div class="relative flex items-center">
