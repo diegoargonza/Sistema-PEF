@@ -9,6 +9,9 @@ import Wrapper from './wrapper'
 import Consulta from './paginas/Consulta'
 import RegistroInv from './paginas/RegistroInventarios'
 import Reportes from './paginas/Reportes'
+import Producto from './paginas/Producto'
+import ProductoInv from './paginas/ProductoInvestigacion'
+import EdicionProducto from './paginas/EdiciónProducto'
 
 function App() {
 
@@ -23,6 +26,9 @@ function App() {
           <Route path='consulta' element={<Consulta/>}></Route>
           <Route path='registroInv' element={<RegistroInv/>}></Route>
           <Route path='reportes' element={<Reportes/>}></Route>
+          <Route path='busqueda/producto' element={<Producto/>}></Route>
+          <Route path='productoInv' element={<ProductoInv/>}></Route>
+          <Route path='productoInv/edicionProducto' element={<EdicionProducto/>}></Route>
         </Routes>
       </main>   
     </Wrapper>

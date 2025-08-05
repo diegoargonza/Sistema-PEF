@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 function Busqueda(){
     return(
         <>
@@ -144,7 +145,7 @@ function Busqueda(){
                         <p className="border-b-1">Año</p>
                     </div>
                     <div className="grid place-content-end mr-2 ">
-                        <button className="border rounded-full w-20 ">Ver más</button>
+                        <button className="border rounded-full w-20 "><Link to="producto">Ver más</Link> </button>
                     </div>
                 </div>
                 {/* 2 */}
@@ -213,12 +214,12 @@ function Busqueda(){
                     {/* <img/> */}
                     <p className="border p-15 text-center"> Image cap</p>
                     <div>
-                        <h2 className="mt-2">Conferencias filosofía de la psicología</h2>
+                        <h2 className="">Conferencias filosofía de la psicología</h2>
                         <div className="w-auto h-auto">
                             <p className="text-sm">Liga de las conferencias sobre Filosofía de la Psicología y disponibles en línea</p>
                         </div>
                     </div>
-                    <div className="mt-2">
+                    <div className="">
                         <p className="border-b-1">Videoconferencía</p>
                         <p className="border-b-1">Zuraya Monroy Nasr</p>
                         <p className="border-b-1">Facultad de Psicología</p>
@@ -233,12 +234,12 @@ function Busqueda(){
                     {/* <img/> */}
                     <p className="border p-15 text-center"> Image cap</p>
                     <div>
-                        <h2 className="mt-2">El nombre del Popocatépetl</h2>
+                        <h2 className="">El nombre del Popocatépetl</h2>
                         <div className="w-auto h-auto">
                             <p className="text-sm">El nombre del Popocatépetl. Religión popular y paisaje ritual en la Sierra Nevada</p>
                         </div>
                     </div>
-                    <div className="mt-2">
+                    <div className="">
                         <p className="border-b-1">Reseña</p>
                         <p className="border-b-1">David Lorente Fernández</p>
                         <p className="border-b-1">Instituto de Investigaciones Históricas</p>
@@ -258,7 +259,7 @@ function Busqueda(){
                             <p className="text-sm ">Muestra representativa de obra y sistemas gráficos en la casa de la Cultura Anáhuac del Parque Metropolitano de la Ciudad de Santiago</p>
                         </div>
                     </div>
-                    <div className="mt-6">
+                    <div className="">
                         <p className="border-b-1">Exposición</p>
                         <p className="border-b-1">Arturo Rosales Ramírez</p>
                         <p className="border-b-1">Facultad de Artes y Diseño</p>
@@ -278,7 +279,7 @@ function Busqueda(){
                             <p className="text-sm">Aspecto y personalidad, acerca de quién fue este líder indígena, defensor de los derechos territoriales</p>
                         </div>
                     </div>
-                    <div className="mt-2">
+                    <div className="">
                         <p className="border-b-1">Fotografía</p>
                         <p className="border-b-1">José Refugio Arellano Sánchez</p>
                         <p className="border-b-1">Facultad de Ciencias Políticas y Sociales</p>
