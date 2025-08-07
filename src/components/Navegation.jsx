@@ -1,95 +1,47 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
 
-
 function Navegation(){
-    
-const [isOpen, setIsOpen] = useState(false);
     return(
         
         <>
+        
         {/* Navbar */}
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> 
-        <nav class="bg-gray-100">
-        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-            <div class="relative flex h-16 items-center justify-between">
-            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                
-                <button type="button" command="--toggle" commandfor="mobile-menu" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset">
-                <span class="absolute -inset-0.5"></span>
-                <span class="sr-only">Open main menu</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 in-aria-expanded:hidden">
-                    <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 not-in-aria-expanded:hidden">
-                    <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-                </button>
-            </div>
-            <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                <div class="flex shrink-0 items-center">
-                <img /> {/*Escudo de la UNAM*/}
-                </div>
-                <div class="hidden sm:ml-6 sm:block">
-                <div class="flex space-x-4 relative">
-                    
-                    <a href="#"  class="rounded-md px-3 py-2 text-sm font-medium text-balck hover:bg-gray-700 hover:text-white"><Link to="/">Inicio</Link></a>
+        
+        <nav className="flex  justify-between bg-slate-100 p-5">
+            <div>
+                <a href="#"  class="rounded-md px-3 py-2 text-sm font-medium text-balck "><Link to="/">Inicio</Link></a>
 
-                    <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white"><Link to="Consulta" onClick={()=> setIsOpen(!isOpen)}>Consulta</Link> 
-                    </a>            
-                        {/* {isOpen && (
-                        <div className="  ">
-                            <a href="#" className="block px-4 py-2 hover:bg-gray-200">
-                            Opción 1
-                            </a>
-                            <a href="#" className="block px-4 py-2 hover:bg-gray-200">
-                            Opción 2
-                            </a>
-                            <a href="#" className="block px-4 py-2 hover:bg-gray-200">
-                            Cerrar sesión
-                            </a>
+                <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-black "><Link to="Consulta" onClick={()=> setIsOpen(!isOpen)}>Consulta</Link> 
+                                    </a>            
+                <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-black "><Link to="registroInv">Registro de productos de Inv.</Link></a>
+                <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-black "><Link to="reportes">Reportes</Link></a>
+                <el-dropdown class="inline-block">
+                    <button class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-xs inset-ring-1 inset-ring-gray-300 hover:bg-gray-50">
+                        Options
+                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="-mr-1 size-5 text-gray-400">
+                        <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
+                        </svg>
+                    </button>
+
+                    <el-menu anchor="bottom end" popover class="w-56 origin-top-right rounded-md bg-white shadow-lg outline-1 outline-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
+                        <div class="py-1">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">Account settings</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">Support</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">License</a>
+                        <form action="#" method="POST">
+                            <button type="submit" class="block w-full px-4 py-2 text-left text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">Sign out</button>
+                        </form>
                         </div>
-                        )} */}
-                    
-                    <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white"><Link to="registroInv">Registro de productos de Inv.</Link></a>
-                    <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white"><Link to="reportes">Reportes</Link></a>
-                    <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">Administración</a>
-                    
-                </div>
-                </div>
-
-                
-            </div>
-            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <button type="button" class="">
-                    <p href="#" class="rounded-md px-3 py-2 text-sm font-medium text-balck ">Miguel Gutiérrez González </p>
-            
-                
-                </button>
-
-                <el-dropdown class="relative ml-3">
-
-                <el-menu anchor="bottom end" popover class="w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:outline-hidden">Your Profile</a>
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:outline-hidden">Settings</a>
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:outline-hidden">Sign out</a>
-                </el-menu>
+                    </el-menu>
                 </el-dropdown>
             </div>
+            <div>
+                <p className="rounded-md px-3 py-2 text-sm font-medium text-black">Miguel Gutiérrez González</p>
             </div>
-        </div>
-
-        <el-disclosure id="mobile-menu" hidden class="block sm:hidden">
-            <div class="space-y-1 px-2 pt-2 pb-3">
-            {/*Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white"*/} 
-            <a href="#" aria-current="page" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white">Dashboard</a>
-            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
-            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
-            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
-            </div>
-        </el-disclosure>
+            
         </nav>
-
+       
         {/* Buscador */}
 
         <div class="w-full max-w-sm min-w-[500px] mx-auto md:mt-3">

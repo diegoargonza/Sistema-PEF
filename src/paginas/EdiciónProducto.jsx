@@ -16,7 +16,7 @@ function EdicionProducto(){
                 </div>
                 <div className="grid grid-cols-1">
                     <label className="font-bold">Tipo de producto</label>
-                    <select className="border rounded-md p-2 mt-2">
+                    <select className="border rounded-md  mt-2">
                         <option>Todos</option>
                         <option>2</option>
                         <option>3</option>
@@ -24,7 +24,7 @@ function EdicionProducto(){
                 </div>
                 <div className="grid grid-cols-1">
                     <label className="font-bold">Subtipo de  producto</label>
-                    <select className="border rounded-md p-2 mt-2">
+                    <select className="border rounded-md mt-2">
                         <option>Todos</option>
                         <option>2</option>
                         <option>3</option>
@@ -94,19 +94,11 @@ function EdicionProducto(){
                 </div>
                 <div className="grid grid-cols-1">
                     <label className="font-bold">Subárea de conocimiento</label>
-                    <select className="border rounded-md p-2 mt-2">
-                        <option>Todos</option>
-                        <option>2</option>
-                        <option>3</option>
-                    </select>
+                    <input type="text" className="border rounded-md p-2 mt-2"></input>
                 </div>
                 <div className="grid grid-cols-1">
                     <label className="font-bold">Subárea de conocimiento</label>
-                    <select className="border rounded-md p-2 mt-2">
-                        <option>Todos</option>
-                        <option>2</option>
-                        <option>3</option>
-                    </select>
+                    <input type="text" className="border rounded-md p-2 mt-2"></input>
                 </div>
                 <div className="grid grid-cols-1">
                     <label className="font-bold">Escuela o Facultad que acredita</label>
@@ -118,11 +110,7 @@ function EdicionProducto(){
                 </div>
                 <div className="grid grid-cols-1">
                     <label className="font-bold">Línea de generación o aplicación</label>
-                    <select className="border rounded-md p-2 mt-2">
-                        <option>Todos</option>
-                        <option>2</option>
-                        <option>3</option>
-                    </select>
+                    <input type="text" className="border rounded-md p-2 mt-2"></input>
                 </div>
                 <div className="grid grid-cols-1">
                     <label className="font-bold">Idioma</label>
@@ -134,11 +122,7 @@ function EdicionProducto(){
                 </div>
                 <div className="grid grid-cols-1">
                     <label className="font-bold">Vinculación solcial/institucional</label>
-                    <select className="border rounded-md p-2 mt-2">
-                        <option>Todos</option>
-                        <option>2</option>
-                        <option>3</option>
-                    </select>
+                    <input type="text" className="border rounded-md p-2 mt-2"></input>
                 </div>
                 <div className="grid grid-cols-1">
                     <label className="font-bold">Nivel de impacto</label>
@@ -158,31 +142,19 @@ function EdicionProducto(){
             <div className="grid grid-cols-3 gap-10 m-8 ">
                 <div className="grid grid-cols-1">
                     <label className="font-bold">Nombre </label>
-                    <select className="border rounded-md p-2 mt-2">
-                        <option>Todos</option>
-                        <option>2</option>
-                        <option>3</option>
-                    </select>
+                    <input type="text" className="border rounded-md p-2 mt-2"></input>
                 </div>
                 <div className="grid grid-cols-1">
                     <label className="font-bold">Primer Apellido</label>
-                    <select className="border rounded-md p-2 mt-2">
-                        <option>Todos</option>
-                        <option>2</option>
-                        <option>3</option>
-                    </select>
+                    <input type="text" className="border rounded-md p-2 mt-2"></input>
                 </div>
                 <div className="grid grid-cols-1">
                     <label className="font-bold">Segundo Apellido</label>
-                    <select className="border rounded-md p-2 mt-2">
-                        <option>Todos</option>
-                        <option>2</option>
-                        <option>3</option>
-                    </select>
+                    <input type="text" className="border rounded-md p-2 mt-2"></input>
                 </div>
                 <div className="grid grid-cols-1">
                     <label className="font-bold">Rol en el producto de investigación</label>
-                    <select className="border rounded-md p-2 mt-2">
+                    <select className="border rounded-md  mt-2">
                         <option>Todos</option>
                         <option>2</option>
                         <option>3</option>
@@ -190,35 +162,19 @@ function EdicionProducto(){
                 </div>
                 <div className="grid grid-cols-1">
                     <label className="font-bold">Otro rol en el producto de investigación</label>
-                    <select className="border rounded-md p-2 mt-2">
-                        <option>Todos</option>
-                        <option>2</option>
-                        <option>3</option>
-                    </select>
+                    <input type="text" className="border rounded-md p-2 mt-2"></input>
                 </div>
                 <div className="grid grid-cols-1">
                     <label className="font-bold">Numero de empleado o RFC</label>
-                    <select className="border rounded-md p-2 mt-2">
-                        <option>Todos</option>
-                        <option>2</option>
-                        <option>3</option>
-                    </select>
+                    <input type="text" className="border rounded-md  mt-2"></input>
                 </div>
                 <div className="grid grid-cols-1">
                     <label className="font-bold">CURP / FM3</label>
-                    <select className="border rounded-md p-2 mt-2">
-                        <option>Todos</option>
-                        <option>2</option>
-                        <option>3</option>
-                    </select>
+                    <input type="text" className="border rounded-md p-2 mt-2"></input>
                 </div>
                 <div className="grid grid-cols-1">
                     <label className="font-bold">Correo electrónico</label>
-                    <select className="border rounded-md p-2 mt-2">
-                        <option>Todos</option>
-                        <option>2</option>
-                        <option>3</option>
-                    </select>
+                    <input type="text" className="border rounded-md p-2 mt-2"></input>
                 </div>
                 <div className="grid grid-cols-1">
                     <label className="font-bold">Entidad académica</label>
@@ -230,27 +186,15 @@ function EdicionProducto(){
                 </div>
                 <div className="grid grid-cols-1">
                     <label className="font-bold">Área académica</label>
-                    <select className="border rounded-md p-2 mt-2">
-                        <option>Todos</option>
-                        <option>2</option>
-                        <option>3</option>
-                    </select>
+                    <input type="text" className="border rounded-md p-2 mt-2"></input>
                 </div>
                 <div className="grid grid-cols-1">
                     <label className="font-bold">Departamento</label>
-                    <select className="border rounded-md p-2 mt-2">
-                        <option>Todos</option>
-                        <option>2</option>
-                        <option>3</option>
-                    </select>
+                    <input type="text" className="border rounded-md p-2 mt-2"></input>
                 </div>
                 <div className="grid grid-cols-1">
                     <label className="font-bold">Orcid, Reserchagate ó CVU</label>
-                    <select className="border rounded-md p-2 mt-2">
-                        <option>Todos</option>
-                        <option>2</option>
-                        <option>3</option>
-                    </select>
+                    <input type="text" className="border rounded-md p-2 mt-2"></input>
                 </div>
                 <div className="grid grid-cols-1">
                     <label className="font-bold">Nivel académico</label>

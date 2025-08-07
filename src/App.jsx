@@ -12,6 +12,8 @@ import Reportes from './paginas/Reportes'
 import Producto from './paginas/Producto'
 import ProductoInv from './paginas/ProductoInvestigacion'
 import EdicionProducto from './paginas/EdiciónProducto'
+import NuevoProducto from './paginas/NuevoProducto'
+
 
 function App() {
 
@@ -29,6 +31,7 @@ function App() {
           <Route path='busqueda/producto' element={<Producto/>}></Route>
           <Route path='productoInv' element={<ProductoInv/>}></Route>
           <Route path='productoInv/edicionProducto' element={<EdicionProducto/>}></Route>
+          <Route path='nuevoProducto' element={<NuevoProducto/>}></Route>
         </Routes>
       </main>   
     </Wrapper>
