@@ -1,4 +1,7 @@
 import { Outlet, Link } from "react-router-dom";
+import Modal from "./components/Modal";
+// import imgFondo1 from '/img/fondo1.jpg';
+// import imgFondo2 from '/img/Fondo2.jpg';
 
 
 const Layout = () => {
@@ -9,13 +12,13 @@ const Layout = () => {
         
         <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
            
-            <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                <img src class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+            {/* <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                <img src={imgFondo1} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
             </div>
          
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
-            </div>
+                <img src={imgFondo2} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+            </div> */}
 
         </div>
        
@@ -123,6 +126,8 @@ const Layout = () => {
               </span>
           </button>
       </div>
+
+   
      
     </>
   )

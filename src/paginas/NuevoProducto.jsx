@@ -32,32 +32,33 @@ function NuevoProducto(){
             <div className="m-10">
                 <p>Palabras clave</p>
                 <p>Para seleccionar las palabras clave que estarán relacionadas con el software presione el símbolo "+", de lo contrario en "x".Si la(s) palabra(s) clave relacionadas con el software no se encuentra(n), puede añadirlo en el campo "Añadir nueva palabra clave".</p>
+                <p className="text-end text-blue-500 underline ">Reordenar palabras clave</p>
                 <div className="flex space-x-5 border rounded-md  p-4">
-                    <div className="flex space-x-8 border items-center p-1 w-30">
+                    <div className="flex space-x-8 border items-center p-1 ">
                         <p className="  ">Palabra 1</p>
                         <p>x</p>
                     </div>
-                    <div className="flex space-x-8 border items-center p-1 w-30">
+                    <div className="flex space-x-8 border items-center p-1 ">
                         <p className="  ">Palabra 2</p>
                         <p>x</p>
                     </div>
-                    <div className="flex space-x-8 border items-center p-1 w-30">
+                    <div className="flex space-x-8 border items-center p-1 ">
                         <p className="  ">Palabra 3</p>
                         <p>x</p>
                     </div>
-                    <div className="flex space-x-8 border items-center p-1 w-30 bg-slate-50 ">
+                    <div className="flex space-x-8 border items-center p-1  bg-slate-50 ">
                         <p className="  ">Palabra 4</p>
                         <p className="">+</p>
                     </div>
 
                 </div>
-                <div className="flex items-center">
+                <div className="flex  items-center">
                     <div className="grid grid-cols-1 m-3">
                         <label>Palabra clave</label>
                         <input type="text" className="border rounded-md p-2 "></input>
                     </div>
-                    <div className="grid place-content-center border  rounded-full w-5 h-5">
-                        +
+                    <div className="grid place-content-center border bg-green-500  rounded-full w-5 h-5 mt-5">
+                        <button className="cursor-pointer text-white">+</button>
                     </div>
                 </div>
             </div>

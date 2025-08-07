@@ -68,11 +68,11 @@ function ProductoInv(){
                     <input type="text" className="border rounded-md p-2 mt-2"></input>
                 </div>
             </div>
-            {/* Botones  */}
+           {/* Botones  */}
 
-            <div className="flex justify-center space-x-5 p-3">
-                <button className="border w-35 rounded-md p-2">Filtrar</button>
-                <button className="border w-35 rounded-md p-2">Limpiar</button>
+           <div className="flex justify-center space-x-5 p-3">
+                <button className="w-35  border bg-blue-200 rounded-md p-2">Filtrar</button>
+                <button className="w-35  border bg-gray-200 rounded-md p-2">Limpiar</button>
             </div>
             
         </div>
@@ -88,16 +88,16 @@ function ProductoInv(){
             </div>
             <div className="flex space-x-10">
 
-                <div className="border rounded-md p-2 ">
+                <div className="border bg-blue-50  rounded-md p-2 ">
                     <p>Reorganizar producto </p>
                 </div>
-                <div className="border rounded-md p-2">
+                <div className="border bg-green-50 rounded-md p-2">
                     <p>Capturar nuevo producto</p>
                 </div>
             </div>
         </div>
         {/* Paginador con tailwindcss */}
-        <div class="flex items-center justify-between border-t border-gray-200  px-4 py-3 sm:px-6">
+        <div class="flex items-center justify-between   px-4 py-3 sm:px-6">
         <div class="flex flex-1 justify-between sm:hidden">
             <a href="#" class="relative inline-flex items-center rounded-md border border-gray-300  px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Previous</a>
             <a href="#" class="relative ml-3 inline-flex items-center rounded-md border border-gray-300  px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Next</a>
@@ -106,11 +106,11 @@ function ProductoInv(){
             <div>
             <p class="text-sm text-gray-700 space-x-1">
                 Mostrando 
-                <span class="font-medium ">1</span>
+                <span class="font-medium mx-1">1</span>
                 al
-                <span class="font-medium">5</span>
+                <span class="font-medium mx-1">5</span>
                 de
-                <span class="font-medium">5</span>
+                <span class="font-medium mx-1">5</span>
                 resultados
             </p>
             </div>
@@ -124,12 +124,6 @@ function ProductoInv(){
                 </a>
             
                 <a href="#" aria-current="page" class="relative z-10 inline-flex items-center bg-indigo-600 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">1</a>
-                <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 inset-ring inset-ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">2</a>
-                <a href="#" class="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 inset-ring inset-ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 md:inline-flex">3</a>
-                <span class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-700 inset-ring inset-ring-gray-300 focus:outline-offset-0">...</span>
-                <a href="#" class="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 inset-ring inset-ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 md:inline-flex">8</a>
-                <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 inset-ring inset-ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">9</a>
-                <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 inset-ring inset-ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">10</a>
                 <a href="#" class="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 inset-ring inset-ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
                 <span class="sr-only">Next</span>
                 <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
