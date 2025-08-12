@@ -1,7 +1,7 @@
 function Modal(props){
   return(
     <>  
-      <button command="show-modal" commandfor={props.id} class="rounded-md bg-gray-950/5 px-2.5 py-1.5 text-sm font-semibold text-gray-900 hover:bg-gray-950/10">{props.button}</button>
+      <button command="show-modal" commandfor={props.id} class="">{props.button}</button>
       <el-dialog>
         <dialog id={props.id} aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
           <el-dialog-backdrop class="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>

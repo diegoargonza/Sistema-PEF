@@ -1,4 +1,11 @@
+import ModalForm from "../components/ModalForm";
+import Modal from "../components/Modal";
+import { Link } from "react-router-dom"
+import { useState } from "react";
+
 function GestionUsuario(){
+
+    
     return(
         <>
         <h1 className="text-center text-xl">Producto de Investigación</h1>
@@ -92,10 +99,14 @@ function GestionUsuario(){
                 </div>
                 <div className="border bg-green-50 rounded-md p-2">
                 <button command="show-modal" commandfor="dialog-1" class="cursor-pointer">+ Capturar nuevo producto</button>
+                <ModalForm
+                    title ='Captura de nuevo usuario'
+                ></ModalForm>
                 </div>
             </div>
         </div>
         {/* Paginador con tailwindcss */}
+      
         <div class="flex items-center justify-between   sm:px-6 ">
         <div class="flex flex-1 justify-between sm:hidden">
             <a href="#" class="relative inline-flex items-center rounded-md border border-gray-300  px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Previous</a>
@@ -136,7 +147,7 @@ function GestionUsuario(){
 
         {/* Tabla de usuarios */}
 
-        <form className="ml-30 mt-2">
+        <form className=" mt-2">
             <tr >
                 <th className="border p-5 bg-gray-200">ID</th>
                 <th className="border p-5 bg-gray-200">Nombre(s)</th>
@@ -159,7 +170,20 @@ function GestionUsuario(){
                 <td className="border p-5">Doctorado</td>
                 <td className="border p-5">Consulta Registro</td>
                 <td className="border p-5">Activo</td>
-                <td className="border p-5"></td>
+                <td className="border p-5">
+                    <div className="flex space-x-5">
+                        <div>
+                            Editar
+                        </div>
+                        <div class="relative inline-block w-11 h-5">
+                            <input  id="switch-component-1" type="checkbox" class="peer appearance-none w-11 h-5 bg-slate-100 rounded-full checked:bg-slate-800 cursor-pointer transition-colors duration-300" />
+                            
+                            <label for="switch-component-1" class="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-6 peer-checked:border-slate-800 cursor-pointer">
+                            </label>
+                        </div>
+                    </div>
+                     
+                </td>
             </tr>
             <tr>
                 <td className="border p-5">2</td>
@@ -171,7 +195,19 @@ function GestionUsuario(){
                 <td className="border p-5">Doctorado</td>
                 <td className="border p-5">Consulta, Registro</td>
                 <td className="border p-5">Activo</td>
-                <td className="border p-5"></td>
+                <td className="border p-5">
+                     <div className="flex space-x-5">
+                        <div>
+                            Editar
+                        </div>
+                        <div class="relative inline-block w-11 h-5">
+                            <input  id="switch-component-1" type="checkbox" class="peer appearance-none w-11 h-5 bg-slate-100 rounded-full checked:bg-slate-800 cursor-pointer transition-colors duration-300" />
+                            
+                            <label for="switch-component-1" class="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-6 peer-checked:border-slate-800 cursor-pointer">
+                            </label>
+                        </div>
+                    </div>
+                </td>
             </tr>
             <tr>
                 <td className="border p-5">3</td>
@@ -183,7 +219,19 @@ function GestionUsuario(){
                 <td className="border p-5">Maestría</td>
                 <td className="border p-5"> Consulta</td>
                 <td className="border p-5">Activo</td>
-                <td className="border p-5"></td>
+                <td className="border p-5">
+                     <div className="flex space-x-5">
+                        <div>
+                            Editar
+                        </div>
+                        <div class="relative inline-block w-11 h-5">
+                            <input  id="switch-component-1" type="checkbox" class="peer appearance-none w-11 h-5 bg-slate-100 rounded-full checked:bg-slate-800 cursor-pointer transition-colors duration-300" />
+                            
+                            <label for="switch-component-1" class="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-6 peer-checked:border-slate-800 cursor-pointer">
+                            </label>
+                        </div>
+                    </div>
+                </td>
             </tr>
             <tr>
                 <td className="border p-5">4</td>
@@ -195,7 +243,19 @@ function GestionUsuario(){
                 <td className="border p-5">Doctorado </td>
                 <td className="border p-5">Consulta, Registro</td>
                 <td className="border p-5">Activo</td>
-                <td className="border p-5"></td>
+                <td className="border p-5">
+                     <div className="flex space-x-5">
+                        <div>
+                            Editar
+                        </div>
+                        <div class="relative inline-block w-11 h-5">
+                            <input  id="switch-component-1" type="checkbox" class="peer appearance-none w-11 h-5 bg-slate-100 rounded-full checked:bg-slate-800 cursor-pointer transition-colors duration-300" />
+                            
+                            <label for="switch-component-1" class="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-6 peer-checked:border-slate-800 cursor-pointer">
+                            </label>
+                        </div>
+                    </div>
+                </td>
             </tr>
             <tr>
                 <td className="border p-5">5</td>
@@ -207,10 +267,42 @@ function GestionUsuario(){
                 <td className="border p-5">Doctorado</td>
                 <td className="border p-5">Consulta</td>
                 <td className="border p-5">Inactivo</td>
-                <td className="border p-5"></td>
+                <td className="border p-5">
+                     <div className="flex space-x-5">
+                        <div>
+                            <a>
+                                <Link to='editarUsuario'>
+                                    Editar
+                                </Link>
+                            </a>
+                        </div>
+
+                        <div class="relative inline-block w-11 h-5">
+                            <input  id="switch-component-20" type="checkbox" class="peer appearance-none w-11 h-5 bg-slate-100 rounded-full checked:bg-slate-800 cursor-pointer transition-colors duration-300" /> 
+                            <label for="switch-component-20" class="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-6 peer-checked:border-slate-800 cursor-pointer">
+                            </label>
+                        </div>
+                        <div class="relative inline-block ">
+                                {/* <input  id="switch-component-ga1"  type="checkbox" className="peer appearance-none w-11 h-5 bg-slate-100 rounded-full checked:bg-slate-800 cursor-pointer transition-colors duration-300" /> */}
+                                <Modal
+                                    button ='Activar'
+                                    id= 'dialog-activar'
+                                    title ='Confirmación para activar el anuncio'
+                                    text ='Al activar el anuncio, este se presentará en la sección de Difusión de 
+                                    actualizaciones de catálogos de Productos de Investigación UNAM'
+                                    text2 ='¿Desea continuar?'
+                                
+                                ></Modal>
+
+                                {/* <label for="switch-component-ga1" class="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-6 peer-checked:border-slate-800 cursor-pointer">
+                                </label> */}
+                            </div>
+                       
+                    </div>
+                </td>
             </tr>
-           
         </form>
+
         </>
     );
 }

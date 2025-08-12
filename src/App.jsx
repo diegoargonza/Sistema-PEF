@@ -15,6 +15,8 @@ import EdicionProducto from './paginas/EdiciónProducto'
 import NuevoProducto from './paginas/NuevoProducto'
 import GestionAvisos from './paginas/GestionAvisos'
 import GestionUsuario from './paginas/GestionUsuario'
+import EdicionUsuario from './paginas/EdicionUsuario'
+
 
 
 function App() {
@@ -36,6 +38,7 @@ function App() {
           <Route path='nuevoProducto' element={<NuevoProducto/>}></Route>
           <Route path='gestionAvisos' element={<GestionAvisos/>}></Route>
           <Route path='gestionUsuarios' element={<GestionUsuario/>}></Route>
+          <Route path='gestionUsuarios/editarUsuario' element={<EdicionUsuario/>}></Route>
         </Routes>
       </main>   
     </Wrapper>
