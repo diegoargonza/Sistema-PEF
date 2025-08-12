@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+
+/* fuente local */
+@font-face {
+  font-family: "Gotu";
+  src: url("/assets/fonts/Gotu-Regular.woff2") format("woff2");
+}
+
+@theme {
+  --font-display: "Gotu", sans-serif;
+
+  --color-primary-50: oklch(96.6% 0.006 255.49);
+  --color-primary-100: oklch(92.13% 0.016 266.3);
+  --color-primary-200: oklch(84.44% 0.033 266.14);
+  --color-primary-300: oklch(76.8% 0.051 263.66);
+  --color-primary-400: oklch(68.95% 0.07 261.13);
+  --color-primary-500: oklch(61.25% 0.069 259.35);
+  --color-primary-600: oklch(53.47% 0.061 259.53);
+  --color-primary-700: oklch(45.75% 0.053 259.78);
+  --color-primary-800: oklch(38.07% 0.044 260.17);
+  --color-primary-900: oklch(25.84% 0.029 259.07);
+  --color-primary-950: oklch(19.91% 0.022 260.47);
+
+  --color-secondary-50: oklch(96.46% 0.006 84.49);
+  --color-secondary-100: oklch(92.2% 0.015 90.2);
+  --color-secondary-200: oklch(84.54% 0.02 90.53);
+  --color-secondary-300: oklch(76.75% 0.018 87.99);
+  --color-secondary-400: oklch(69.29% 0.016 90.25);
+  --color-secondary-500: oklch(60.31% 0.014 91.56);
+  --color-secondary-600: oklch(50.73% 0.012 87.49);
+  --color-secondary-700: oklch(41.28% 0.01 91.57);
+  --color-secondary-800: oklch(31.78% 0.008 84.57);
+  --color-secondary-900: oklch(23.11% 0.004 84.56);
+  --color-secondary-950: oklch(17.8% 0.004 84.57);
+}
+
+@layer base {
+  .wrapper {
+    @apply w-11/12 2xl:w-[1300px] mx-auto;
+  }
+  h1 {
+    @apply font-display text-6xl md:text-4xl lg:text-5xl text-primary-600 my-5 text-center;
+  }
+  .card h3 {
+    @apply font-display text-lg md:text-xl lg:text-2xl text-white;
+  }
+}

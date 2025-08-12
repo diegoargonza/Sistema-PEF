@@ -1,6 +1,6 @@
 function Wrapper({ children }) {
     return (
-        <div className="p-5 m-8 bg-gray-100">   
+        <div className="p-5 m-8 ">   
         {children}
       </div>
     );

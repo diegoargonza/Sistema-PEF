@@ -1,13 +1,24 @@
 import { Outlet, Link } from "react-router-dom";
-import Modal from "./components/Modal";
-// import imgFondo1 from '/img/fondo1.jpg';
-// import imgFondo2 from '/img/Fondo2.jpg';
-
+import Buscador from "./components/Buscador";
+import Wrapper from "./wrapper";
 
 const Layout = () => {
+
+    const listaDeElementos = ["Facultad de Arquitectura", "Facultad de Artes y Diseño", "Facultad de Ciencias", "Facultad de Ciencias Políticas y Sociales", "Facultad de Contaduría y Administración", "Facultad de Derecho", "Facultad de Economía", "Facultad de Estudios Superiores (FES) Acatlán", "Facultad de Estudios Superiores (FES) Aragón", "Facultad de Estudios Superiores (FES) Cuautitlán", "Facultad de Estudios Superiores (FES) Iztacala" ];
+
+    const años = ["2025", "2024", "2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015" ];
+ 
   return (
     <>
+{/* Buscador */}
+<Buscador></Buscador>
+
+
+
+
 {/*Carrusel */}
+<Wrapper>
+
     <div id="indicators-carousel" class="relative w-full" data-carousel="static">
         
         <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
@@ -47,36 +58,48 @@ const Layout = () => {
             </span>
         </button>
     </div>
+    <h2 className="font-display text-center text-2xl text-secondary-300">Criterios básicos de clasificación</h2>
 
     {/*Clasificaciones principales  */}
-    <div className="grid  grid-cols-4 gap-4 text-center h-100">
-      <div className="border ">
-        <h1>Entidad académica</h1>
-      </div>
+    <div className="grid grid-cols-4  gap-5 border border-primary-400 bg-primary-50 rounded-md p-10 mt-5 ">
+        
       <div className="border">
-        <h1>Año</h1>
-      </div>
-      <div className="border">
-        <h1>Tipo de producto de investigación</h1>
-      </div>
-      <div className="border">
-        <h1>Área de conocimiento</h1>
+
+        <ul>
+            {listaDeElementos.map((item, index)=>(
+                <li key={index}>{item}</li>
+            ))}
+        </ul>
+                      
+        <ul>
+            {años.map((item, index)=>(
+                <li key={index}>{item}</li>
+            ))}
+        </ul>
+                      
+
+                   
       </div>
 
     </div>
 
+
+    <h2 className="font-display text-center text-2xl text-secondary-300 mt-5">Datos de producción de investigación respecto al tiempo</h2>
+
     {/* Estadísticas*/}
-    <div className="border p-2 mt-10">
-      <div className="border">
-        <h1 className="text-center">DATOS DE PRODUCCIÓN DE INVESTIGACIÓN RESPECTO AL TIEMPO</h1>
-      </div>
+    <div className="border border-primary-400 bg-primary-50 rounded-md p-10 mt-5">
+      
+        
+      
       <div className=" p-10">
 
       </div>
     </div>
 
-        {/* Estadísticas*/}
-        <div id="indicators-carousel" class="relative w-full" data-carousel="static">
+    <h2 className="font-display text-center text-2xl text-secondary-300 mt-5">Productos destacados</h2>
+
+        {/* destacados*/}
+        <div id="indicators-carousel" class="border border-primary-400 bg-primary-50 rounded-md p-10 mt-5" data-carousel="static">
           
           <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
             
@@ -126,8 +149,9 @@ const Layout = () => {
               </span>
           </button>
       </div>
+    </Wrapper>
 
-   
+
      
     </>
   )

@@ -1,7 +1,15 @@
 import { Link } from "react-router-dom"
+import Card from "../components/Card"
+import Buscador from "../components/Buscador"
+import Wrapper from "../wrapper"
 function Busqueda(){
     return(
         <>
+        {/* Busador */}
+        <Buscador></Buscador>
+        {/* Contenido */}
+    <Wrapper>
+
         <h1 className="text-2xl text-center">Todos los catálogos</h1>
         <div className="flex space-x-4   w-full  ">
            <div className="w-120 border ">
@@ -123,177 +131,99 @@ function Busqueda(){
 
            </div>
 
-           <div className="w-full border  p-2 ">
-            <div className="w-95 border mt-5">
-                <p>Búsqueda rápida con filtros aplicados</p>
-            </div>
-            <div className="grid grid-cols-4 grid-rows-2 gap-4 text-justify mt-2">
-                {/* 1 */}
-                <div className="grid grid-rows-3 h-110 border p-2">
-                  
-                    {/* <img/> */}
-                    <p className="border p-15 text-center"> Image cap</p>
-                    <div>
-                        <h2 className="mt-2">Tesis</h2>
-                        <div className="w-auto h-auto">
-                            <p className="text-sm">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                    <div className="mt-2">
-                        <p className="border-b-1">Facultad o esculea</p>
-                        <p className="border-b-1">Autor</p>
-                        <p className="border-b-1">Año</p>
-                    </div>
-                    <div className="grid place-content-end mr-2 ">
-                        <button className="border rounded-full w-20 "><Link to="producto">Ver más</Link> </button>
-                    </div>
+        <div className="w-full border  p-2 ">
+                <div className="w-95 border mt-5">
+                    <p>Búsqueda rápida con filtros aplicados</p>
                 </div>
-                {/* 2 */}
-                <div className="grid grid-rows-3 h-110 border p-2">
-                  
-                    {/* <img/> */}
-                    <p className="border p-15 text-center"> Image cap</p>
-                    <div>
-                        <h2 className="mt-2">Riesgo climático en México</h2>
-                        <div className="w-auto h-auto">
-                            <p className="text-sm">Análisis de flujo de humedad y lluvias en el Valle de México.</p>
-                        </div>
-                    </div>
-                    <div className="mt-2">
-                        <p className="border-b-1">Ponencia</p>
-                        <p className="border-b-1">Víctor Orlando Magaña Rueda</p>
-                        <p className="border-b-1">Instituto de Geografía</p>
-                    </div>
-                    <div className="grid place-content-end mr-2 ">
-                        <button className="border rounded-full w-20 ">Ver más</button>
-                    </div>
-                </div>
-                {/* 3 */}
-                <div className="grid grid-rows-3 h-110 border p-2">
-                  
-                    {/* <img/> */}
-                    <p className="border p-15 text-center"> Image cap</p>
-                    <div>
-                        <h2 className="mt-2">Control de la artritis encefalitis caprina en México</h2>
-                        <div className="w-auto h-auto">
-                            <p className="text-sm">Estudios moleculares y serológicos para la detección del virus de la artritis encefalitis caprina</p>
-                        </div>
-                    </div>
-                    <div className="mt-2">
-                        <p className="border-b-1">Memorias</p>
-                        <p className="border-b-1">Abel Manuel Trujillo García</p>
-                        <p className="border-b-1">Facultad de Medicina Veterinaria y Zootecnia</p>
-                    </div>
-                    <div className="grid place-content-end mr-2 ">
-                        <button className="border rounded-full w-20 ">Ver más</button>
-                    </div>
-                </div>
-                {/* 4 */}
-                <div className="grid grid-rows-3 h-110 border p-2">
-                  
-                    {/* <img/> */}
-                    <p className="border p-15 text-center"> Image cap</p>
-                    <div>
-                        <h2 className="mt-2">El nuevo malestar en la cultura</h2>
-                        <div className="w-auto h-auto">
-                            <p className="text-sm">Estudios moleculares y serológicos para la detección del virus de la artritis encefalitis caprina</p>
-                        </div>
-                    </div>
-                    <div className="mt-2">
-                        <p className="border-b-1">Memorias</p>
-                        <p className="border-b-1">Abel Manuel Trujillo García</p>
-                        <p className="border-b-1">Facultad de Medicina Veterinaria y Zootecnia</p>
-                    </div>
-                    <div className="grid place-content-end mr-2 ">
-                        <button className="border rounded-full w-20 ">Ver más</button>
-                    </div>
-                </div>
-                {/* 5 */}
-                <div className="grid grid-rows-3 h-110 border p-2">
-                  
-                    {/* <img/> */}
-                    <p className="border p-15 text-center"> Image cap</p>
-                    <div>
-                        <h2 className="">Conferencias filosofía de la psicología</h2>
-                        <div className="w-auto h-auto">
-                            <p className="text-sm">Liga de las conferencias sobre Filosofía de la Psicología y disponibles en línea</p>
-                        </div>
-                    </div>
-                    <div className="">
-                        <p className="border-b-1">Videoconferencía</p>
-                        <p className="border-b-1">Zuraya Monroy Nasr</p>
-                        <p className="border-b-1">Facultad de Psicología</p>
-                    </div>
-                    <div className="grid place-content-end mr-2 ">
-                        <button className="border rounded-full w-20 ">Ver más</button>
-                    </div>
-                </div>
-                {/* 6 */}
-                <div className="grid grid-rows-3 h-110 border p-2">
-                  
-                    {/* <img/> */}
-                    <p className="border p-15 text-center"> Image cap</p>
-                    <div>
-                        <h2 className="">El nombre del Popocatépetl</h2>
-                        <div className="w-auto h-auto">
-                            <p className="text-sm">El nombre del Popocatépetl. Religión popular y paisaje ritual en la Sierra Nevada</p>
-                        </div>
-                    </div>
-                    <div className="">
-                        <p className="border-b-1">Reseña</p>
-                        <p className="border-b-1">David Lorente Fernández</p>
-                        <p className="border-b-1">Instituto de Investigaciones Históricas</p>
-                    </div>
-                    <div className="grid place-content-end mr-2 ">
-                        <button className="border rounded-full w-20 ">Ver más</button>
-                    </div>
-                </div>
-                {/* 7 */}
-                <div className="grid grid-rows-3 h-110 border p-2">
-                  
-                    {/* <img/> */}
-                    <p className="border p-15 text-center"> Image cap</p>
-                    <div className="">
-                        <h2 className="mt-2">Sistemas de impresión y gráfica artística</h2>
-                        <div className="w-auto h-auto">
-                            <p className="text-sm ">Muestra representativa de obra y sistemas gráficos en la casa de la Cultura Anáhuac del Parque Metropolitano de la Ciudad de Santiago</p>
-                        </div>
-                    </div>
-                    <div className="">
-                        <p className="border-b-1">Exposición</p>
-                        <p className="border-b-1">Arturo Rosales Ramírez</p>
-                        <p className="border-b-1">Facultad de Artes y Diseño</p>
-                    </div>
-                    <div className="grid place-content-end mr-2 ">
-                        <button className="border rounded-full w-20 ">Ver más</button>
-                    </div>
-                </div>
-                {/* 8 */}
-                <div className="grid grid-rows-3 h-110 border p-2">
-                  
-                    {/* <img/> */}
-                    <p className="border p-15 text-center"> Image cap</p>
-                    <div>
-                        <h2 className="mt-2">Un Indio en la cámara legislativa</h2>
-                        <div className="w-auto h-auto">
-                            <p className="text-sm">Aspecto y personalidad, acerca de quién fue este líder indígena, defensor de los derechos territoriales</p>
-                        </div>
-                    </div>
-                    <div className="">
-                        <p className="border-b-1">Fotografía</p>
-                        <p className="border-b-1">José Refugio Arellano Sánchez</p>
-                        <p className="border-b-1">Facultad de Ciencias Políticas y Sociales</p>
-                    </div>
-                    <div className="grid place-content-end mr-2 ">
-                        <button className="border rounded-full w-20 ">Ver más</button>
-                    </div>
-                </div>
+            <div className="grid grid-cols-4 gap-3 mt-3">
+                
+                <Card
+                    title='Tesis'
+                    content='Some quick example text to build on the card title and make up the bulk of the cards content.'
+                    tipo='Facultad o esculea'
+                    autor='Autor'
+                    depend='fasd'
+                    anio='Año'
+                />
+                <Card
+                    title='Riesgo climático en México'
+                    content='Análisis de flujo de humedad y lluvias en el Valle de México.'
+                    tipo='Ponencia'
+                    autor='Víctor Orlando Magaña Rueda'
+                    depend='Instituto de Geografía'
+                    anio='2025'
+                />
+                <Card
+                    title='Control de la artritis encefalitis caprina en México'
+                    content='Muestra representativa de obra y sistemas gráficos en la casa de la Cultura Anáhuac del Parque Metropolitano de la Ciudad de Santiago'
+                    tipo='Exposición'
+                    autor='Arturo Rosales Ramírez'
+                    depend='Facultad de Artes y Diseño'
+                    anio='2025'
+                />
+                <Card
+                    title='El nuevo malestar en la cultura'
+                    content='Some quick example text to build on the card title and make up the bulk of the cards content.'
+                    tipo='Facultad o esculea'
+                    autor='Autor'
+                    depend=''
+                    anio='Año'
+                />
+                <Card
+                    title='Conferencias filosofía de la psicología '
+                    content='Some quick example text to build on the card title and make up the bulk of the cards content.'
+                    tipo='Facultad o esculea'
+                    autor='Autor'
+                    depend=''
+                    anio='Año'
+                />
+                <Card
+                    title='El nombre del Popocatépetl'
+                    content='Some quick example text to build on the card title and make up the bulk of the cards content.'
+                    tipo='Facultad o esculea'
+                    autor='Autor'
+                    depend=''
+                    anio='Año'
+                />
+                <Card
+                    title='Sistemas de impresión y gráfica artística'
+                    content='Some quick example text to build on the card title and make up the bulk of the cards content.'
+                    tipo='Facultad o esculea'
+                    autor='Autor'
+                    depend=''
+                    anio='Año'
+                />
+                <Card
+                    title='Un Indio en la cámara legislativa'
+                    content='Some quick example text to build on the card title and make up the bulk of the cards content.'
+                    tipo='Facultad o esculea'
+                    autor='Autor'
+                    depend=''
+                    anio='Año'
+                />
+                <Card
+                    title='Un Indio en la cámara legislativa'
+                    content='Some quick example text to build on the card title and make up the bulk of the cards content.'
+                    tipo='Facultad o esculea'
+                    autor='Autor'
+                    depend=''
+                    anio='Año'
+                />
+                <Card
+                    title='Un Indio en la cámara legislativa'
+                    content='Some quick example text to build on the card title and make up the bulk of the cards content.'
+                    tipo='Facultad o esculea'
+                    autor='Autor'
+                    depend=''
+                    anio='Año'
+                />
 
             </div>
 
-           </div>
-            
         </div>
+            
+    </div>
+    </Wrapper>
         </>
  )
 }
