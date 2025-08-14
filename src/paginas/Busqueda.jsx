@@ -4,6 +4,15 @@ import Buscador from "../components/Buscador"
 import Wrapper from "../wrapper"
 
 function Busqueda(){
+    function handleClick() {
+        const button = document.getElementById("contenido-tipo-producto");
+        const activo = true;
+        if (activo){
+            button.classList.add('hidden');
+        } else{
+            button.classList.add('');
+        }
+      }
     return(
         <>
         {/* Busador */}
@@ -38,9 +47,9 @@ function Busqueda(){
             </div>
 
             <div className="border mt-5">
-                    <div className="">
-                        <h2 className="p-2">Tipo de producto</h2>
-                        <div className="p-2">
+                    <div className="border ">
+                        <button className="p-2 border w-full text-left " id="tipo-producto" onClick={handleClick}>Tipo de producto</button>
+                        <div className="p-2" id="contenido-tipo-producto">
                             <div className="flex space-x-2">
                                 <input type="checkbox"></input>
                                 <label>Tesis</label>
@@ -210,6 +219,22 @@ function Busqueda(){
                 />
                 <Card
                     title='Sistemas de impresión y gráfica artística'
+                    content='Some quick example text to build on the card title and make up the bulk of the cards content.'
+                    tipo='Facultad o esculea'
+                    autor='Autor'
+                    depend=''
+                    anio='Año'
+                />
+                <Card
+                    title='Un Indio en la cámara legislativa'
+                    content='Some quick example text to build on the card title and make up the bulk of the cards content.'
+                    tipo='Facultad o esculea'
+                    autor='Autor'
+                    depend=''
+                    anio='Año'
+                />
+                <Card
+                    title='Un Indio en la cámara legislativa'
                     content='Some quick example text to build on the card title and make up the bulk of the cards content.'
                     tipo='Facultad o esculea'
                     autor='Autor'

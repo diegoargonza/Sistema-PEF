@@ -24,7 +24,7 @@ function App() {
     <>
     <Navegation/> 
     
-      <main className=''>
+      <main className='font-display'>
         <Routes>
           <Route path='/' element={<Layout/>}></Route>
           <Route path='busqueda' element={<Busqueda/>}></Route>

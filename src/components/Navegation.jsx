@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import logoUnam from '../assets/UNAM.png';
+import logoUnam from '../assets/UNAMhead.svg';
 import Wrapper from "../wrapper";
 
 function Navegation(){
@@ -11,7 +11,7 @@ function Navegation(){
         {/* Navbar */}
         
         <header className=" flex  justify-between items-center p-2  ">
-            <img src={logoUnam} className="h-20 ml-5"/>
+            <img src={logoUnam} className="h-15 ml-5"/>
             <h1 className="text-2xl mr-5">Plataforma de trabajos de investigación en Escuelas y Facultades </h1>
         </header>
      

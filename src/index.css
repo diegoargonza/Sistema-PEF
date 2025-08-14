@@ -9,7 +9,7 @@
 }
 
 @theme {
-  --font-display: "Gotu", sans-serif;
+  --font-display: "Gotu";
 
   --color-primary-50: oklch(96.6% 0.006 255.49);
   --color-primary-100: oklch(92.13% 0.016 266.3);
