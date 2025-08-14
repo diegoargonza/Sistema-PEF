@@ -1,84 +1,144 @@
 import { Outlet, Link } from "react-router-dom";
 import Buscador from "./components/Buscador";
 import Wrapper from "./wrapper";
+import Card from "./components/Card";
+import CardDes from "./components/CardDes";
 
 const Layout = () => {
 
-    const listaDeElementos = ["Facultad de Arquitectura", "Facultad de Artes y Diseño", "Facultad de Ciencias", "Facultad de Ciencias Políticas y Sociales", "Facultad de Contaduría y Administración", "Facultad de Derecho", "Facultad de Economía", "Facultad de Estudios Superiores (FES) Acatlán", "Facultad de Estudios Superiores (FES) Aragón", "Facultad de Estudios Superiores (FES) Cuautitlán", "Facultad de Estudios Superiores (FES) Iztacala" ];
+    const facultades = ["Facultad de Arquitectura", "Facultad de Artes y Diseño", "Facultad de Ciencias", "Facultad de Ciencias Políticas y Sociales", "Facultad de Contaduría y Administración", "Facultad de Derecho", "Facultad de Economía", "Facultad de Estudios Superiores (FES) Acatlán", "Facultad de Estudios Superiores (FES) Aragón", "Facultad de Estudios Superiores (FES) Cuautitlán", "Facultad de Estudios Superiores (FES) Iztacala", "Facultad de Estudios Superiores (FES) Zaragoza", "Facultad de Filosofía y Letras", "Facultad de Ingeniería", "Facultad de Medicina", "Facultad de Medicina Veterinaria y Zootecnia", "Facultad de Música", "Facultad de Odontología", "Facultad de Psicología" ];
 
-    const años = ["2025", "2024", "2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015" ];
+    const anio = ["2025", "2024", "2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012" ];
+
+    const tipoProductos= ["Artículos Científicos", "Libros", "Capítulos de libros", "Tesis", "Monografías", "Patentes", "Prototipos", "Modelos de utilidad", "Productos tecnologícos", "Software", "Informes técnicos", "Consultorias cientifico-teconlógicas", "Obras astisicas"];
+
+    const areaConocimiento =["Microbiología", "Virología", "Bioingeniería", "Toxicología", "Cristalografía", "Bioinformática Genómica", "Fisología", "Biología molecular de eucariotes", "Ciencias de la computación", "Física matemática", "Probabilidad y estadística", "Materiales", "Otros"];
  
   return (
     <>
 {/* Buscador */}
-<Buscador></Buscador>
+<div>
+    <Buscador></Buscador>
+</div>
+
+{/* Carrusel */}
+<div className="p-50 ">
+
+</div>
 
 
 
-
-{/*Carrusel */}
 <Wrapper>
 
-    <div id="indicators-carousel" class="relative w-full" data-carousel="static">
-        
-        <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-           
-            {/* <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                <img src={imgFondo1} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
-            </div>
-         
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src={imgFondo2} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
-            </div> */}
-
-        </div>
-       
-        <div class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-5 left-1/2">
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
-        </div>
-        
-        <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-                </svg>
-                <span class="sr-only">Previous</span>
-            </span>
-        </button>
-        <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-                </svg>
-                <span class="sr-only">Next</span>
-            </span>
-        </button>
-    </div>
+    
     <h2 className="font-display text-center text-2xl text-secondary-300">Criterios básicos de clasificación</h2>
 
     {/*Clasificaciones principales  */}
-    <div className="grid grid-cols-4  gap-5 border border-primary-400 bg-primary-50 rounded-md p-10 mt-5 ">
+    <div className="border border-primary-400 bg-primary-50 rounded-md p-10 mt-5 ">
         
-      <div className="border">
+      <div className="flex space-x-10 ">
+        <div className="flex border border-slate-400 w-80">
+            <div className="bg-primary-500 w-80 ">
+                <div className="flex">
+                    <h2 className="p-3 text-white w-60 ">Entidad académica</h2>
+                    <h2 className="p-3 text-white  border-l-1 "></h2>
+                </div>
+                <div className="flex space-x-20 bg-white overflow-auto h-100 p-2">
+                    <div>
 
-        <ul>
-            {listaDeElementos.map((item, index)=>(
-                <li key={index}>{item}</li>
-            ))}
-        </ul>
-                      
-        <ul>
-            {años.map((item, index)=>(
-                <li key={index}>{item}</li>
-            ))}
-        </ul>
-                      
+                        {facultades.map((item, index)=>(
+                            <p key={index} className="mt-2">{item}</p>
+                        ))}
+                    </div>
+                    <div>
+                        
+                        {facultades.map((item, index)=>(
+                            <p key={item} className="mt-2">{index}</p>
+                        ))}
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
 
-                   
+
+        <div className="flex border border-slate-400 w-80  ">
+            <div className="bg-primary-500 w-80 ">
+                <div className="flex">
+                    <h2 className="p-3 text-white w-60 ">Año de publicación</h2>
+                    <h2 className="p-3 text-white  border-l-1 "></h2>
+                </div>
+                <div className="flex space-x-20 bg-white overflow-auto h-100 p-2">
+                    <div>
+
+                        {anio.map((item, index)=>(
+                            <p key={index} className="mt-2">{item}</p>
+                        ))}
+                    </div>
+                    <div>
+                        
+                        {anio.map((item, index)=>(
+                            <p key={index} className="mt-2 md:ml-39 lg:ml-39">{index}</p>
+                        ))}
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div className="flex border border-slate-400 w-80 ">
+            <div className="bg-primary-500 w-80 ">
+                <div className="flex">
+                    <h2 className="p-3 text-white w-60 ">Tipo de producto</h2>
+                    <h2 className="p-3 text-white  border-l-1 "></h2>
+                </div>
+                <div className="flex space-x-20 bg-white overflow-auto h-100 p-2 ">
+                    <div>
+
+                        {tipoProductos.map((item, index)=>(
+                            <p key={index} className="mt-2">{item}</p>
+                        ))}
+                    </div>
+                    <div>
+                        
+                        {tipoProductos.map((item, index)=>(
+                            <p key={index} className="mt-2">{index}</p>
+                        ))}
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div className="flex border border-slate-400 w-80 ">
+            <div className="bg-primary-500 w-80 ">
+                <div className="flex">
+                    <h2 className="p-3 text-white w-60 ">Área de conocimiento</h2>
+                    <h2 className="p-3 text-white  border-l-1 "></h2>
+                </div>
+                <div className="flex space-x-20 bg-white overflow-auto h-100 p-2">
+                    <div>
+
+                        {areaConocimiento.map((item, index)=>(
+                            <p key={index} className="mt-2">{item}</p>
+                        ))}
+                    </div>
+                    <div>
+                        
+                        {areaConocimiento.map((item, index)=>(
+                            <p key={index} className="mt-2">{index}</p>
+                        ))}
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+
+
+
+
+  
       </div>
 
     </div>
@@ -95,59 +155,71 @@ const Layout = () => {
 
       </div>
     </div>
+    
 
     <h2 className="font-display text-center text-2xl text-secondary-300 mt-5">Productos destacados</h2>
 
         {/* destacados*/}
         <div id="indicators-carousel" class="border border-primary-400 bg-primary-50 rounded-md p-10 mt-5" data-carousel="static">
           
-          <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+          <div class="flex  space-x-10 relative h-56 overflow-hidden rounded-lg md:h-96">
             
-              <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                  <img src="/docs/images/carousel/carousel-1.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+              <div class="  h-auto w-80" data-carousel-item="active">
+                        
+                    <CardDes
+                        content='Memorias'
+                        title='Control de artrítis ecefalis caprina en México'
+                        autor='Abel Manuel Trujillo García'
+                        depend='Facultad de Medicina y Zootecnia'
+                        anio='2024'
+                    />
+                    
+                        
               </div>
-          
-              <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                  <img src="/docs/images/carousel/carousel-2.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+              <div class="  h-auto w-80" data-carousel-item="active">
+                        
+                    <CardDes
+                        content='Ponencia'
+                        title='Control de artrítis ecefalis caprina en México'
+                        autor='Abel Manuel'
+                        depend='Facultad de Medicina y Zootecnia'
+                        anio='2024'
+                    />
+                    
+                        
+              </div>
+              <div class="  h-auto w-80" data-carousel-item="active">
+                        
+                    <CardDes
+                        content='Fotografía'
+                        title='Control de artrítis ecefalis caprina en México'
+                        autor='Abel Manuel'
+                        depend='Facultad de Medicina y Zootecnia'
+                        anio='2024'
+                    />
+                    
+                        
               </div>
 
-              <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                  <img src="/docs/images/carousel/carousel-3.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+             <div class="  h-auto w-80" data-carousel-item="active">
+                        
+                    <CardDes
+                        content='Libro'
+                        title='Control de artrítis ecefalis caprina en México'
+                        autor='Abel Manuel'
+                        depend='Facultad de Medicina y Zootecnia'
+                        anio='2024'
+                    />
+                    
+                        
               </div>
-              
-              <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                  <img src="/docs/images/carousel/carousel-4.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
-              </div>
-            
-              <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                  <img src="/docs/images/carousel/carousel-5.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
-              </div>
+             
+          
+             
           </div>
         
-          <div class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-5 left-1/2">
-              <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-              <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-              <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-              <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
-              <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
-          </div>
           
-          <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-              <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                  <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-                  </svg>
-                  <span class="sr-only">Previous</span>
-              </span>
-          </button>
-          <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-              <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                  <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-                  </svg>
-                  <span class="sr-only">Next</span>
-              </span>
-          </button>
+          
       </div>
     </Wrapper>
 

@@ -43,6 +43,10 @@
   h1 {
     @apply font-display text-6xl md:text-4xl lg:text-5xl text-primary-600 my-5 text-center;
   }
+
+  h2 {
+    @apply font-display   text-primary-600 ;
+  }
   .card h3 {
     @apply font-display text-lg md:text-xl lg:text-2xl text-white;
   }
