@@ -16,8 +16,8 @@ function Carrusel() {
   };
 
   return (
-    <div className="border border-primary-600 relative w-[1800px]  mx-auto overflow-hidden">
-      <div className="w-[1800px] h-[500px] relative">
+    <div className="border border-primary-600 relative w-[1500px]  mx-auto overflow-hidden">
+      <div className="w-[1500px] h-[500px] relative">
         <img
           src={imagenes[indice]}
           alt={`Slide ${indice}`}

@@ -1,8 +1,8 @@
-function Card({ title, content, tipo, autor, depend, anio }) {
+function Card({ title, content, tipo, autor, depend, anio, img }) {
   return (
     <>
       <div class="card group relative  text-white mt-auto h-110 overflow-hidden">
-        <div className="group-hover:scale-110 absolute inset-0 bg-[url('assets/item1.webp')] bg-cover bg-center transition-transform duration-300 "></div>
+        <div className="group-hover:scale-110 absolute inset-0  bg-cover bg-center transition-transform duration-300 " style={{backgroundImage: `url(${img})`}}></div>
         <a
           href="#"
           className="absolute grid grid-rows-2 bg-black/50 w-full h-full "

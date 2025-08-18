@@ -3,16 +3,26 @@ import Card from "../components/Card"
 import Buscador from "../components/Buscador"
 import Wrapper from "../wrapper"
 
+
+import item from '../assets/item1.webp'
+import item2 from '../assets/item2.webp'
+import item3 from '../assets/item3.webp'
+import item4 from '../assets/item4.webp'
+
+
 function Busqueda(){
-    function handleClick() {
-        const button = document.getElementById("contenido-tipo-producto");
-        const activo = true;
-        if (activo){
-            button.classList.add('hidden');
-        } else{
-            button.classList.add('');
+    function toggleContent(e) {
+       const id = e.target.id;
+       const contenido = document.getElementById("contenido-tipo-producto");
+       const contenido2 = document.getElementById("contenido-facultades");
+    
+        if (id === '1'){
+            contenido.classList.toggle('hidden');
+        } else if(id === '2'){
+             contenido.classList.toggle('hidden');
         }
-      }
+
+    }
     return(
         <>
         {/* Busador */}
@@ -46,9 +56,12 @@ function Busqueda(){
                 </a>      
             </div>
 
-            <div className="border mt-5">
-                    <div className="border ">
-                        <button className="p-2 border w-full text-left " id="tipo-producto" onClick={handleClick}>Tipo de producto</button>
+            <div className="mt-5">
+                    <div className="flex items-center justify-between bg-primary-500 h-10">
+                        <h1 className="text-sm text-white p-2 ">Tipo de producto</h1>
+                        <button className=" bg-primary-500 text-white font-bold  text-2xl  w-15 " onClick={toggleContent} id="1">+</button>
+                    </div>
+                    <div>
                         <div className="p-2" id="contenido-tipo-producto">
                             <div className="flex space-x-2">
                                 <input type="checkbox"></input>
@@ -69,10 +82,12 @@ function Busqueda(){
                         </div>
                     </div>
 
-
+                    <div className="flex items-center justify-between bg-primary-500 h-10 mt-5">
+                        <h1 className="text-sm text-white p-2 ">Entidad de desarrollo</h1>
+                        <button className=" bg-primary-500 text-white font-bold  text-2xl  w-15 " onClick={toggleContent} id="2">+</button>
+                    </div>
                     <div>
-                        <h2 className="p-2">Entidad de desarrollo</h2>
-                        <div className="p-2">
+                        <div className="p-2" id="contenido-facultades">
                             <div className="flex space-x-2">
                                 <input type="checkbox"></input>
                                 <label>Facultad de Arquitectura</label>
@@ -92,9 +107,11 @@ function Busqueda(){
                         </div>
                     </div>
 
-
+                    <div className="flex items-center justify-between bg-primary-500 h-10 mt-5">
+                        <h1 className="text-sm text-white p-2 ">Área de conocimiento</h1>
+                        <button className=" bg-primary-500 text-white font-bold  text-2xl  w-15 " onClick={toggleContent}>+</button>
+                    </div>
                     <div>
-                        <h2 className="p-2">Área de conocimiento</h2>
                         <div className="p-2">
                             <div className="flex space-x-2">
                                 <input type="checkbox"></input>
@@ -115,9 +132,12 @@ function Busqueda(){
                         </div>
                     </div>
 
-                    {/* Etiquetas de la busqueda con filtro */}
+                
+                    <div className="flex items-center justify-between bg-primary-500 h-10 mt-5">
+                        <h1 className="text-sm text-white p-2 ">Medio de Difusión</h1>
+                        <button className=" bg-primary-500 text-white font-bold  text-2xl  w-15 " onClick={toggleContent}>+</button>
+                    </div>
                     <div >
-                        <h2 className="p-2">Medio de Difusión</h2>
                         <div className="p-2">
                             <div className="flex space-x-2">
                                 <input type="checkbox"></input>
@@ -138,9 +158,11 @@ function Busqueda(){
                         </div>
                     </div>
 
-
+                    <div className="flex items-center justify-between bg-primary-500 h-10 mt-5">
+                        <h1 className="text-sm text-white p-2 ">Año de publicación</h1>
+                        <button className=" bg-primary-500 text-white font-bold  text-2xl  w-15 " >+</button>
+                    </div>
                     <div>
-                        <h2 className="p-2">Año de publicación</h2>
                         <div className="p-2">
                             <div className="flex space-x-2">
                                 <input type="checkbox"></input>
@@ -176,6 +198,7 @@ function Busqueda(){
                     autor='Autor'
                     depend='fasd'
                     anio='Año'
+                    img={item}
                 />
                 <Card
                     title='Riesgo climático en México'
@@ -184,6 +207,7 @@ function Busqueda(){
                     autor='Víctor Orlando Magaña Rueda'
                     depend='Instituto de Geografía'
                     anio='2025'
+                    img={item2}
                 />
                 <Card
                     title='Control de la artritis encefalitis caprina en México'
@@ -192,6 +216,7 @@ function Busqueda(){
                     autor='Arturo Rosales Ramírez'
                     depend='Facultad de Artes y Diseño'
                     anio='2025'
+                    img={item3}
                 />
                 <Card
                     title='El nuevo malestar en la cultura'
@@ -200,70 +225,79 @@ function Busqueda(){
                     autor='Autor'
                     depend=''
                     anio='Año'
+                    img={item4}
                 />
                 <Card
-                    title='Conferencias filosofía de la psicología '
+                    title='Tesis'
+                    content='Some quick example text to build on the card title and make up the bulk of the cards content.'
+                    tipo='Facultad o esculea'
+                    autor='Autor'
+                    depend='fasd'
+                    anio='Año'
+                    img={item}
+                />
+                <Card
+                    title='Riesgo climático en México'
+                    content='Análisis de flujo de humedad y lluvias en el Valle de México.'
+                    tipo='Ponencia'
+                    autor='Víctor Orlando Magaña Rueda'
+                    depend='Instituto de Geografía'
+                    anio='2025'
+                    img={item2}
+                />
+                <Card
+                    title='Control de la artritis encefalitis caprina en México'
+                    content='Muestra representativa de obra y sistemas gráficos en la casa de la Cultura Anáhuac del Parque Metropolitano de la Ciudad de Santiago'
+                    tipo='Exposición'
+                    autor='Arturo Rosales Ramírez'
+                    depend='Facultad de Artes y Diseño'
+                    anio='2025'
+                    img={item3}
+                />
+                <Card
+                    title='El nuevo malestar en la cultura'
                     content='Some quick example text to build on the card title and make up the bulk of the cards content.'
                     tipo='Facultad o esculea'
                     autor='Autor'
                     depend=''
                     anio='Año'
+                    img={item4}
                 />
                 <Card
-                    title='El nombre del Popocatépetl'
+                    title='Tesis'
+                    content='Some quick example text to build on the card title and make up the bulk of the cards content.'
+                    tipo='Facultad o esculea'
+                    autor='Autor'
+                    depend='fasd'
+                    anio='Año'
+                    img={item}
+                />
+                <Card
+                    title='Riesgo climático en México'
+                    content='Análisis de flujo de humedad y lluvias en el Valle de México.'
+                    tipo='Ponencia'
+                    autor='Víctor Orlando Magaña Rueda'
+                    depend='Instituto de Geografía'
+                    anio='2025'
+                    img={item2}
+                />
+                <Card
+                    title='Control de la artritis encefalitis caprina en México'
+                    content='Muestra representativa de obra y sistemas gráficos en la casa de la Cultura Anáhuac del Parque Metropolitano de la Ciudad de Santiago'
+                    tipo='Exposición'
+                    autor='Arturo Rosales Ramírez'
+                    depend='Facultad de Artes y Diseño'
+                    anio='2025'
+                    img={item3}
+                />
+                <Card
+                    title='El nuevo malestar en la cultura'
                     content='Some quick example text to build on the card title and make up the bulk of the cards content.'
                     tipo='Facultad o esculea'
                     autor='Autor'
                     depend=''
                     anio='Año'
-                />
-                <Card
-                    title='Sistemas de impresión y gráfica artística'
-                    content='Some quick example text to build on the card title and make up the bulk of the cards content.'
-                    tipo='Facultad o esculea'
-                    autor='Autor'
-                    depend=''
-                    anio='Año'
-                />
-                <Card
-                    title='Un Indio en la cámara legislativa'
-                    content='Some quick example text to build on the card title and make up the bulk of the cards content.'
-                    tipo='Facultad o esculea'
-                    autor='Autor'
-                    depend=''
-                    anio='Año'
-                />
-                <Card
-                    title='Un Indio en la cámara legislativa'
-                    content='Some quick example text to build on the card title and make up the bulk of the cards content.'
-                    tipo='Facultad o esculea'
-                    autor='Autor'
-                    depend=''
-                    anio='Año'
-                />
-                <Card
-                    title='Un Indio en la cámara legislativa'
-                    content='Some quick example text to build on the card title and make up the bulk of the cards content.'
-                    tipo='Facultad o esculea'
-                    autor='Autor'
-                    depend=''
-                    anio='Año'
-                />
-                <Card
-                    title='Un Indio en la cámara legislativa'
-                    content='Some quick example text to build on the card title and make up the bulk of the cards content.'
-                    tipo='Facultad o esculea'
-                    autor='Autor'
-                    depend=''
-                    anio='Año'
-                />
-                <Card
-                    title='Un Indio en la cámara legislativa'
-                    content='Some quick example text to build on the card title and make up the bulk of the cards content.'
-                    tipo='Facultad o esculea'
-                    autor='Autor'
-                    depend=''
-                    anio='Año'
+                    img={item4}
                 />
 
             </div>
