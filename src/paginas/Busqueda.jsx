@@ -15,12 +15,32 @@ function Busqueda(){
        const id = e.target.id;
        const contenido = document.getElementById("contenido-tipo-producto");
        const contenido2 = document.getElementById("contenido-facultades");
-    
-        if (id === '1'){
+       const contenido3 = document.getElementById("contenido-area");
+       const contenido4 = document.getElementById("contenido-medio");
+       const contenido5 = document.getElementById("contenido-año");
+       
+       switch(id){
+        case '1':
             contenido.classList.toggle('hidden');
-        } else if(id === '2'){
-             contenido.classList.toggle('hidden');
-        }
+            break;
+        case '2':
+            contenido2.classList.toggle('hidden');
+            break;
+
+        case '3':
+            contenido3.classList.toggle('hidden');
+            break;
+
+        case '4':
+            contenido4.classList.toggle('hidden');
+            break;
+
+
+        case '5':
+            contenido5.classList.toggle('hidden');
+            break;
+       }
+    
 
     }
     return(
@@ -36,7 +56,7 @@ function Busqueda(){
                 <h2 className="text-secondary-500 font-semibold">Filtros</h2>
             </div>
             <div className="ml-50">
-                <h2 className="font-semibold">Resultados de búsqueda para "riesgo social"</h2>
+                <h2 className="font-semibold text-xl">Resultados de búsqueda para "riesgo social"</h2>
             </div>
         </div>
         <div className="flex space-x-4   w-full  ">
@@ -49,7 +69,7 @@ function Busqueda(){
                     class="w-full bg-white placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md pl-10 pr-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" aria-label="buscar"
                 />
                 <a
-                class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none "
+                class="rounded-md bg-primary-700 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none "
                 type="button"
                 >
                 Buscar
@@ -57,9 +77,9 @@ function Busqueda(){
             </div>
 
             <div className="mt-5">
-                    <div className="flex items-center justify-between bg-primary-500 h-10">
+                    <div className="flex items-center justify-between bg-primary-700 h-10">
                         <h1 className="text-sm text-white p-2 ">Tipo de producto</h1>
-                        <button className=" bg-primary-500 text-white font-bold  text-2xl  w-15 " onClick={toggleContent} id="1">+</button>
+                        <button className="  text-white font-bold  text-2xl  w-15 " onClick={toggleContent} id="1">+</button>
                     </div>
                     <div>
                         <div className="p-2" id="contenido-tipo-producto">
@@ -82,9 +102,9 @@ function Busqueda(){
                         </div>
                     </div>
 
-                    <div className="flex items-center justify-between bg-primary-500 h-10 mt-5">
+                    <div className="flex items-center justify-between bg-primary-700 h-10 mt-5">
                         <h1 className="text-sm text-white p-2 ">Entidad de desarrollo</h1>
-                        <button className=" bg-primary-500 text-white font-bold  text-2xl  w-15 " onClick={toggleContent} id="2">+</button>
+                        <button className=" text-white font-bold  text-2xl  w-15 " onClick={toggleContent} id="2">+</button>
                     </div>
                     <div>
                         <div className="p-2" id="contenido-facultades">
@@ -107,12 +127,12 @@ function Busqueda(){
                         </div>
                     </div>
 
-                    <div className="flex items-center justify-between bg-primary-500 h-10 mt-5">
+                    <div className="flex items-center justify-between bg-primary-700 h-10 mt-5">
                         <h1 className="text-sm text-white p-2 ">Área de conocimiento</h1>
-                        <button className=" bg-primary-500 text-white font-bold  text-2xl  w-15 " onClick={toggleContent}>+</button>
+                        <button className="  text-white font-bold  text-2xl  w-15 " onClick={toggleContent} id="3">+</button>
                     </div>
                     <div>
-                        <div className="p-2">
+                        <div className="p-2" id="contenido-area">
                             <div className="flex space-x-2">
                                 <input type="checkbox"></input>
                                 <label>Ciencias físico-matemática y de las ingenierías.</label>
@@ -133,12 +153,12 @@ function Busqueda(){
                     </div>
 
                 
-                    <div className="flex items-center justify-between bg-primary-500 h-10 mt-5">
+                    <div className="flex items-center justify-between bg-primary-700 h-10 mt-5">
                         <h1 className="text-sm text-white p-2 ">Medio de Difusión</h1>
-                        <button className=" bg-primary-500 text-white font-bold  text-2xl  w-15 " onClick={toggleContent}>+</button>
+                        <button className="  text-white font-bold  text-2xl  w-15 " onClick={toggleContent} id="4">+</button>
                     </div>
                     <div >
-                        <div className="p-2">
+                        <div className="p-2" id="contenido-medio">
                             <div className="flex space-x-2">
                                 <input type="checkbox"></input>
                                 <label>Congreso</label>
@@ -158,12 +178,12 @@ function Busqueda(){
                         </div>
                     </div>
 
-                    <div className="flex items-center justify-between bg-primary-500 h-10 mt-5">
+                    <div className="flex items-center justify-between bg-primary-700 h-10 mt-5">
                         <h1 className="text-sm text-white p-2 ">Año de publicación</h1>
-                        <button className=" bg-primary-500 text-white font-bold  text-2xl  w-15 " >+</button>
+                        <button className="  text-white font-bold  text-2xl  w-15 " onClick={toggleContent} id="5">+</button>
                     </div>
                     <div>
-                        <div className="p-2">
+                        <div className="p-2" id="contenido-año">
                             <div className="flex space-x-2">
                                 <input type="checkbox"></input>
                                 <label>2024</label>
@@ -188,7 +208,7 @@ function Busqueda(){
             </div>
             
 
-        <div className="w-full border  p-2 mt-2 ">
+        <div className="w-full  p-2 mt-2 ">
             <div className="grid grid-cols-4 gap-3 mt-3">
                 
                 <Card

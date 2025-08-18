@@ -14,7 +14,7 @@ function Buscador(){
                 
                         />
                         <a
-                        class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2"
+                        class="rounded-md bg-primary-700 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg  ml-2"
                         type="button"
                         >
                             Buscar
@@ -22,8 +22,8 @@ function Buscador(){
                         
                     </div>
                     <div className="flex justify-between mt-3 ">
-                        <p className="text-primary-600">Ver todos los catálogos</p>
-                        <a href="/busqueda" className="text-primary-600">Búsqueda Avanzada</a>
+                        <p className="text-primary-700">Ver todos los catálogos</p>
+                        <a href="/busqueda" className="text-primary-700">Búsqueda Avanzada</a>
                     </div>
                 </div> 
             </div>

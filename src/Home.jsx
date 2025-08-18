@@ -45,7 +45,7 @@ const Layout = () => {
         
       <div className="flex space-x-10 justify-center ">
         <div className="flex border border-slate-400 w-80 ">
-            <div className="bg-primary-500 w-80 ">
+            <div className="bg-primary-700 w-80 ">
                 <div className="flex">
                     <h2 className="p-3 text-white w-60 ">Entidad académica</h2>
                     <h2 className="p-3 text-white  border-l-1 "></h2>
@@ -70,7 +70,7 @@ const Layout = () => {
 
 
         <div className="flex border border-slate-400 w-80  ">
-            <div className="bg-primary-500 w-80 ">
+            <div className="bg-primary-700 w-80 ">
                 <div className="flex">
                     <h2 className="p-3 text-white w-60 ">Año de publicación</h2>
                     <h2 className="p-3 text-white  border-l-1 "></h2>
@@ -94,7 +94,7 @@ const Layout = () => {
         </div>
 
         <div className="flex border border-slate-400 w-80 ">
-            <div className="bg-primary-500 w-80 ">
+            <div className="bg-primary-700 w-80 ">
                 <div className="flex">
                     <h2 className="p-3 text-white w-60 ">Tipo de producto</h2>
                     <h2 className="p-3 text-white  border-l-1 "></h2>
@@ -118,7 +118,7 @@ const Layout = () => {
         </div>
 
         <div className="flex border border-slate-400 w-80 ">
-            <div className="bg-primary-500 w-80 ">
+            <div className="bg-primary-700 w-80 ">
                 <div className="flex">
                     <h2 className="p-3 text-white w-60 ">Área de conocimiento</h2>
                     <h2 className="p-3 text-white  border-l-1 "></h2>
