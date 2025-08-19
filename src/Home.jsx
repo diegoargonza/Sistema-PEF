@@ -228,8 +228,12 @@ const Layout = () => {
 
     </Wrapper>
 
-    {/* <CarruselProd></CarruselProd> */}
-  
+    <CarruselProd
+ 
+
+    
+    
+    ></CarruselProd>
 
      
     </>
