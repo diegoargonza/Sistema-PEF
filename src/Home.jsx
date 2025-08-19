@@ -8,6 +8,9 @@ import item3 from './assets/item3.webp'
 import item4 from './assets/item4.webp'
 import Carrusel from "./components/Carrusel";
 import CarruselProd from "./components/CarruselProd";
+import grafica1 from './assets/grafica1.png'
+import grafica2 from './assets/grafica2.png'
+import grafica3 from './assets/grafica3.png'
 
 
 
@@ -39,7 +42,6 @@ const Layout = () => {
 
     
     <h2 className="font-display text-center text-4xl text-secondary-300">Criterios básicos de clasificación</h2>
-
     {/*Clasificaciones principales  */}
     <div className="border border-primary-400 bg-primary-50 rounded-md p-10 mt-5 ">
         
@@ -156,11 +158,13 @@ const Layout = () => {
     {/* Estadísticas*/}
     <div className="border border-primary-400 bg-primary-50 rounded-md p-10 mt-5">
       
-        
+            <div className="flex space-x-2 justify-center">
+                <img src={grafica1}/>
+                <img src={grafica2}/>
+                {/* <img src={grafica3}/> */}
+            </div>
       
-      <div className=" p-10">
-
-      </div>
+  
     </div>
     
 
@@ -220,14 +224,11 @@ const Layout = () => {
               
           </div>
 
-          
-        
-          
-          
       </div>
+
     </Wrapper>
 
-
+    {/* <CarruselProd></CarruselProd> */}
   
 
      

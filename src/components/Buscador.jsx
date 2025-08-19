@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom"
 function Buscador(){
     return(
         <>
         {/* bg-linear-65 from-primary-300  to-secondary-100 p-20 */}
           {/* Buscador */}
-          <div className="  bg-linear-65 from-primary-400  to-secondary-200 ">
+          <div className="  bg-linear-65 from-primary-400  to-secondary-200 font-display ">
             <div className="bg-[url(assets/bg_busqueda.png)] bg-center">
                 <div class="w-full max-w-sm min-w-[600px] mx-auto p-20 bg-cover">
                     <div class="relative flex items-center space-x-2">
@@ -23,7 +24,9 @@ function Buscador(){
                     </div>
                     <div className="flex justify-between mt-3 ">
                         <p className="text-primary-700">Ver todos los catálogos</p>
-                        <a href="/busqueda" className="text-primary-700">Búsqueda Avanzada</a>
+                        <Link to ='/busqueda'>
+                            <a href="/busqueda" className="text-primary-700">Búsqueda Avanzada</a>
+                        </Link>
                     </div>
                 </div> 
             </div>

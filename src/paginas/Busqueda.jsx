@@ -50,7 +50,7 @@ function Busqueda(){
         {/* Contenido */}
     <Wrapper>
 
-        <h1 className="text-2xl text-center">Todos los catálogos</h1>
+        <h1 className=" text-center">Todos los catálogos</h1>
         <div className="flex space-x-5 ">
             <div className=" text-2xl ml-30">
                 <h2 className="text-secondary-500 font-semibold">Filtros</h2>

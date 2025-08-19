@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <>
-      <footer class=" bg-primary-800 bg-[url(assets/bg-footer.png)] bg-center text-white p-4 mt-auto h-66">
+      <footer class=" bg-primary-800 bg-[url(assets/bg-footer.png)] bg-center text-white p-4 mt-auto h-66 font-display">
         <div className="wrapper grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-0">
           <p className=" pr-10">
           Hecho en México.

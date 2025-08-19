@@ -10,13 +10,13 @@ function Navegation(){
         
         {/* Navbar */}
         
-        <header className=" flex  justify-between items-center p-2  ">
+        <header className=" flex  justify-between items-center p-2 font-display ">
             <img src={logoUnam} className="h-15 ml-5"/>
             <h1 className="text-2xl mr-5">Plataforma de trabajos de investigación en Escuelas y Facultades </h1>
         </header>
      
         
-        <nav className="flex justify-between bg-secondary-300 text-white p-5">
+        <nav className="flex justify-between bg-secondary-300 text-white p-5 font-display">
             <div>
         
             

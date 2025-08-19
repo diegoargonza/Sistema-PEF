@@ -37,6 +37,9 @@
 }
 
 @layer base {
+  p{
+    @apply font-display
+  }
   .wrapper {
     @apply w-11/12 2xl:w-[1300px] mx-auto;
   }

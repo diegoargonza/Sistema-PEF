@@ -22,8 +22,8 @@ function App() {
 
   return (
     <>
-    <Navegation/> 
     
+    <Navegation/> 
       <main className='font-display'>
         <Routes>
           <Route path='/' element={<Layout/>}></Route>
