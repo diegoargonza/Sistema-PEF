@@ -31,7 +31,8 @@ function Carrusel() {
         className="absolute top-1/2 left-4 transform -translate-y-1/2 grid place-content-center  rounded-full w-13 h-13 bg-primary-700"
       > 
             <div className=" text-white text-2xl">
-            ◄               
+
+            &larr;             
             </div>
             
       </button>
@@ -42,7 +43,7 @@ function Carrusel() {
         className="absolute top-1/2 right-4 transform -translate-y-1/2 grid place-content-center  rounded-full w-13 h-13 bg-primary-700"
       >
         <div className=" text-white text-2xl">
-        ►                
+        &rarr;              
         </div>
               
       </button>

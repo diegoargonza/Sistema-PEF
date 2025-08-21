@@ -28,7 +28,7 @@ function CarruselProd() {
   };
 
   return (
-    <div className="relative w-full mx-auto overflow-hidden">
+    <div className="relative w-[1600px] mx-auto overflow-hidden">
       <div
         className="flex transition-transform duration-300"
         style={{ transform: `translateX(-${indice * 100}%)` }}
@@ -59,17 +59,23 @@ function CarruselProd() {
       {/* Botón Izquierda */}
       <button
         onClick={anterior}
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 grid place-content-center rounded-full w-12 h-12 bg-primary-700 z-10"
+        className="absolute top-1/2 left-0 transform -translate-y-1/2 grid place-content-center rounded-full w-12 h-12 bg-primary-700 z-10 text-4xl text-white"
       >
-        <div className="text-white text-2xl">◄</div>
+        <div className=" text-white text-2xl">
+
+        &larr;             
+        </div>
+
       </button>
 
       {/* Botón Derecha */}
       <button
         onClick={siguiente}
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 grid place-content-center rounded-full w-12 h-12 bg-primary-700 z-10"
+        className="absolute top-1/2 right-0 transform -translate-y-1/2 grid place-content-center rounded-full w-12 h-12 bg-primary-700 z-10"
       >
-        <div className="text-white text-2xl">►</div>
+        <div className=" text-white text-2xl">
+        &rarr;              
+        </div>
       </button>
     </div>
   );

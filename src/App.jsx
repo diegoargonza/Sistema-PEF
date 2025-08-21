@@ -6,7 +6,6 @@ import Layout from './Home'
 import Busqueda from './paginas/Busqueda'
 import Navegation from './components/Navegation'
 import Footer from './components/Footer'
-import Wrapper from './wrapper'
 import RegistroInv from './paginas/RegistroInventarios'
 import Producto from './paginas/Producto'
 import ProductoInv from './paginas/ProductoInvestigacion'
@@ -24,7 +23,7 @@ function App() {
     <>
     
     <Navegation/> 
-      <main className='font-display'>
+      <main className=''>
         <Routes>
           <Route path='/' element={<Layout/>}></Route>
           <Route path='busqueda' element={<Busqueda/>}></Route>

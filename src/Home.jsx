@@ -1,16 +1,12 @@
 import { Outlet, Link } from "react-router-dom";
 import Buscador from "./components/Buscador";
 import Wrapper from "./wrapper";
-import CardDes from "./components/CardDes";
-import item1 from './assets/item1.webp'
-import item2 from './assets/item2.webp'
-import item3 from './assets/item3.webp'
-import item4 from './assets/item4.webp'
 import Carrusel from "./components/Carrusel";
 import CarruselProd from "./components/CarruselProd";
 import grafica1 from './assets/grafica1.png'
 import grafica2 from './assets/grafica2.png'
-import grafica3 from './assets/grafica3.png'
+import CarruselEsta from "./components/CarruselEstadistica";
+
 
 
 
@@ -41,7 +37,7 @@ const Layout = () => {
 <Wrapper>
 
     
-    <h2 className="font-display text-center text-4xl text-secondary-300">Criterios básicos de clasificación</h2>
+    <h1 className="">Criterios básicos de clasificación</h1>
     {/*Clasificaciones principales  */}
     <div className="border border-primary-400 bg-primary-50 rounded-md p-10 mt-5 ">
         
@@ -158,14 +154,12 @@ const Layout = () => {
     {/* Estadísticas*/}
     <div className="border border-primary-400 bg-primary-50 rounded-md p-10 mt-5 ">
       
-            <div className="flex space-x-2 justify-center ">
-                <img src={grafica1} className="w-1/2"/>
-                <img src={grafica2} className="w-1/2"/>
-                {/* <img src={grafica3}/> */}
-            </div>
+    <CarruselEsta/>
       
   
     </div>
+    
+    
     
 
     <h2 className="font-display text-center text-4xl text-secondary-300 mt-5">Productos destacados</h2>
@@ -175,7 +169,7 @@ const Layout = () => {
           
           <div class="flex  space-x-10 relative h-56 overflow-hidden rounded-lg md:h-96 justify-center items-center" >
             
-              <div class="  h-auto w-80" data-carousel-item="active">
+              {/* <div class="  h-auto w-80" data-carousel-item="active">
                         
                     <CardDes
                         content='Some quick example text to build on the card title and make up the bulk of the cards content.'
@@ -219,21 +213,17 @@ const Layout = () => {
                         img={item4}
                      
                     />                    
-              </div>
+              </div> */}
 
               
+        <CarruselProd/>
+
           </div>
 
       </div>
 
     </Wrapper>
 
-    <CarruselProd
- 
-
-    
-    
-    ></CarruselProd>
 
      
     </>
