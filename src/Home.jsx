@@ -156,11 +156,11 @@ const Layout = () => {
     <h2 className="font-display text-center text-4xl text-secondary-300 mt-5">Datos de producción de investigación respecto al tiempo</h2>
 
     {/* Estadísticas*/}
-    <div className="border border-primary-400 bg-primary-50 rounded-md p-10 mt-5">
+    <div className="border border-primary-400 bg-primary-50 rounded-md p-10 mt-5 ">
       
-            <div className="flex space-x-2 justify-center">
-                <img src={grafica1}/>
-                <img src={grafica2}/>
+            <div className="flex space-x-2 justify-center ">
+                <img src={grafica1} className="w-1/2"/>
+                <img src={grafica2} className="w-1/2"/>
                 {/* <img src={grafica3}/> */}
             </div>
       
@@ -173,7 +173,7 @@ const Layout = () => {
         {/* destacados*/}
         <div id="indicators-carousel" class="border border-primary-400 bg-primary-50 rounded-md p-10 mt-5" data-carousel="static">
           
-          <div class="flex  space-x-10 relative h-56 overflow-hidden rounded-lg md:h-96 justify-center items-center">
+          <div class="flex  space-x-10 relative h-56 overflow-hidden rounded-lg md:h-96 justify-center items-center" >
             
               <div class="  h-auto w-80" data-carousel-item="active">
                         
