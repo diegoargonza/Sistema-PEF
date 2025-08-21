@@ -1,15 +1,19 @@
+import item1 from '../assets/item1.webp'
+import item2 from '../assets/item2.webp'
+import item3 from '../assets/item3.webp'
+import item4 from '../assets/item4.webp'
 import { useState } from "react";
 
 function CarruselProd() {
   const cards = [
-    { id: 1, title: "Card 1", description: "Descripción de la card 1.", image: "https://via.placeholder.com/300x200?text=Card+1" },
-    { id: 2, title: "Card 2", description: "Descripción de la card 2.", image: "https://via.placeholder.com/300x200?text=Card+2" },
-    { id: 3, title: "Card 3", description: "Descripción de la card 3.", image: "https://via.placeholder.com/300x200?text=Card+3" },
-    { id: 4, title: "Card 4", description: "Descripción de la card 4.", image: "https://via.placeholder.com/300x200?text=Card+4" },
-    { id: 5, title: "Card 5", description: "Descripción de la card 5.", image: "https://via.placeholder.com/300x200?text=Card+5" },
-    { id: 6, title: "Card 6", description: "Descripción de la card 6.", image: "https://via.placeholder.com/300x200?text=Card+6" },
-    { id: 7, title: "Card 7", description: "Descripción de la card 7.", image: "https://via.placeholder.com/300x200?text=Card+7" },
-    { id: 8, title: "Card 8", description: "Descripción de la card 8.", image: "https://via.placeholder.com/300x200?text=Card+8" },
+    { id: 1, title: "Card 1", description: "Descripción de la card 1.", image: item1},
+    { id: 2, title: "Card 2", description: "Descripción de la card 2.", image: item2},
+    { id: 3, title: "Card 3", description: "Descripción de la card 3.", image: item3},
+    { id: 4, title: "Card 4", description: "Descripción de la card 4.", image: item4},
+    { id: 5, title: "Card 5", description: "Descripción de la card 5.", image: item1},
+    { id: 6, title: "Card 6", description: "Descripción de la card 6.", image: item2},
+    { id: 7, title: "Card 7", description: "Descripción de la card 7.", image: item3},
+    { id: 8, title: "Card 8", description: "Descripción de la card 8.", image: item4},
   ];
 
   const [indice, setIndice] = useState(0);
@@ -31,7 +35,7 @@ function CarruselProd() {
       >
         {cards.map((card) => (
           <div key={card.id} className="min-w-[25%] flex justify-center p-4">
-            <div className="card group relative text-white w-[300px] h-[400px] overflow-hidden rounded-lg shadow-lg">
+            <div className="card group relative text-white w-[300px] h-[400px] overflow-hidden  shadow-lg">
               <div
                 className="group-hover:scale-110 absolute inset-0 bg-cover bg-center transition-transform duration-300"
                 style={{ backgroundImage: `url(${card.image})` }}
